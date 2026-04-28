@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok 광고 집행 가이드 — 중동·터키·인도네시아·태국</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0f0f0f;--bg2:#171717;--bg3:#1f1f1f;--border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.14);
+    --text:#f0f0f0;--muted:#888;--muted2:#aaa;
+    --red:#ff4f4f;--red-bg:rgba(255,79,79,0.1);
+    --amber:#f5a623;--amber-bg:rgba(245,166,35,0.1);
+    --green:#3ecf8e;--green-bg:rgba(62,207,142,0.1);
+    --blue:#5b9cf6;--blue-bg:rgba(91,156,246,0.1);
+    --mid:#ff4f4f;--tr:#ff6b35;--id:#22c55e;--th:#a78bfa;
+    --r:8px;--rl:12px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-serif;font-size:14px;line-height:1.6;min-height:100vh}
+  .page{max-width:1100px;margin:0 auto;padding:3rem 2rem 5rem}
+
+  .header{margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+  .hlabel{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.1em;margin-bottom:.6rem;text-transform:uppercase}
+  .header h1{font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.25;margin-bottom:.75rem}
+  .header h1 span{color:var(--muted)}
+  .hmeta{font-size:12px;color:var(--muted);display:flex;gap:1.5rem;flex-wrap:wrap}
+  .hmeta b{color:var(--muted2);font-weight:500}
+
+  .stitle{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:2.5rem 0 1rem;display:flex;align-items:center;gap:.75rem}
+  .stitle::after{content:'';flex:1;height:1px;background:var(--border)}
+
+  .cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  @media(max-width:900px){.cgrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.cgrid,.sh-grid,.lgrid,.dgrid{grid-template-columns:1fr}}
+
+  .cc{background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);padding:1.1rem 1.1rem 1rem;position:relative;overflow:hidden}
+  .cc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+  .cc.mid::before{background:var(--mid)}.cc.tr::before{background:var(--tr)}.cc.id::before{background:var(--id)}.cc.th::before{background:var(--th)}
+  .cchead{margin-bottom:.9rem}
+  .ccname{font-size:15px;font-weight:700;margin-bottom:.15rem}
+  .cc.mid .ccname{color:var(--mid)}.cc.tr .ccname{color:var(--tr)}.cc.id .ccname{color:var(--id)}.cc.th .ccname{color:var(--th)}
+  .ccsub{font-size:11px;color:var(--muted);font-family:'DM Mono',monospace}
+
+  .row{display:flex;align-items:flex-start;gap:7px;margin-bottom:.38rem;font-size:12.5px;line-height:1.45}
+  .rl{color:var(--muted2);flex:1}
+  .div{height:1px;background:var(--border);margin:.8rem 0}
+
+  .b{display:inline-flex;align-items:center;border-radius:4px;font-size:10.5px;font-weight:500;padding:2px 7px;white-space:nowrap;flex-shrink:0;font-family:'DM Mono',monospace;letter-spacing:.01em;margin-top:1px}
+  .bn{background:var(--red-bg);color:var(--red);border:1px solid rgba(255,79,79,.2)}
+  .bw{background:var(--amber-bg);color:var(--amber);border:1px solid rgba(245,166,35,.2)}
+  .bo{background:var(--green-bg);color:var(--green);border:1px solid rgba(62,207,142,.2)}
+  .bi{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(91,156,246,.2)}
+
+  .sh-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  @media(max-width:900px){.sh-grid{grid-template-columns:repeat(2,1fr)}}
+  .shc{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:1rem}
+  .shn{font-size:13px;font-weight:700;margin-bottom:.5rem;color:var(--text)}
+  .sht{font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:.4rem}
+
+  .lgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  @media(max-width:900px){.lgrid{grid-template-columns:repeat(2,1fr)}}
+  .lc{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:1rem}
+  .lct{font-size:13px;font-weight:700;color:var(--text);margin-bottom:.55rem}
+  .tr{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:.5rem}
+  .lt{background:var(--bg3);border:1px solid var(--border2);border-radius:4px;font-size:11px;padding:2px 8px;color:var(--muted2);font-family:'DM Mono',monospace}
+  .ln{font-size:11.5px;color:var(--muted);line-height:1.55}
+  .ln strong{color:var(--muted2);font-weight:500}
+
+  .notice{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--blue);border-radius:0 var(--r) var(--r) 0;padding:.85rem 1.1rem;font-size:12.5px;color:var(--muted2);line-height:1.65;margin-bottom:.75rem}
+  .notice.am{border-left-color:var(--amber)}
+  .notice strong{color:var(--text);font-weight:500}
+
+  .dgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:560px){.dgrid{grid-template-columns:1fr}}
+  .dc{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.1rem}
+  .dct{font-size:13px;font-weight:700;margin-bottom:.7rem}
+  .dc.id .dct{color:var(--id)}.dc.th .dct{color:var(--th)}
+
+  .sw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:600px}
+  thead tr{background:var(--bg3);border-bottom:1px solid var(--border2)}
+  th{padding:.7rem 1rem;text-align:left;font-weight:500;color:var(--muted2);font-size:11.5px;font-family:'DM Mono',monospace;letter-spacing:.04em;white-space:nowrap}
+  td{padding:.65rem 1rem;border-bottom:1px solid var(--border);color:var(--muted2);vertical-align:middle}
+  tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:var(--bg3)}
+  td:first-child{color:var(--text);font-weight:500}
+
+  .footer{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:11px;color:var(--muted);line-height:1.7}
+  .footer a{color:var(--muted2);text-decoration:none}
+  .footer a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="hlabel">TikTok Advertising Compliance Guide</div>
+    <h1>TikTok 광고 집행 가이드<br><span>중동 · 터키 · 인도네시아 · 태국</span></h1>
+    <div class="hmeta">
+      <span><b>기준:</b> TikTok Ads Policy 2025.09–2026.04</span>
+      <span><b>항목:</b> 금지·제한 크리에이티브 / 노출 기준 / 언어 정책 / 집행 이슈</span>
+      <span><b>작성:</b> 2026.04</span>
+    </div>
+  </div>
+
+  <div class="stitle">국가별 크리에이티브 금지·제한 사항</div>
+  <div class="cgrid">
+
+    <div class="cc mid">
+      <div class="cchead"><div class="ccname">중동</div><div class="ccsub">SA · UAE · QA · KW · BH<br>IQ · JO · OM · LB · EG</div></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">알코올 (TikTok 정책 명시)</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">돼지고기 · 돼지 젤라틴 식품</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">담배 · 전자담배</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">도박 · 카지노</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">점성술 · 운세 · 타로</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">이슬람 모독 콘텐츠</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">데이팅앱 광고</span></div>
+      <div class="div"></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">여성 반바지·민소매 금지 (SA 등 보수국). UAE·BH는 맥락 따라</span></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">비키니·수영복 크리에이티브 전면 자제</span></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">식품 광고 → 할랄 준수 필수</span></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">남성 상의탈의 — SA·IQ·KW 피해야. 스포츠 맥락만 UAE 가능성</span></div>
+      <div class="div"></div>
+      <div class="row"><span class="b bi">UAE</span><span class="rl">2025.07~ Mu'lin 광고주 허가증 필수</span></div>
+      <div class="row"><span class="b bi">SA</span><span class="rl">광고 전 GAMR·CITC 심사 필요</span></div>
+    </div>
+
+    <div class="cc tr">
+      <div class="cchead"><div class="ccname">터키</div><div class="ccsub">TR · 인구 8,500만<br>무슬림 다수</div></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">알코올 (모든 매체 전면 금지, 법률)</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">담배 · 전자담배</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">불법 도박 · 온라인 카지노</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">점성술 · 운세 (TikTok 정책)</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">총기류 광고</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">의약품 직접 광고 (법률)</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">법률·세무·감사 서비스 광고</span></div>
+      <div class="div"></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">관능적·성적 시사 콘텐츠 → RTÜK 규제</span></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">스포츠 베팅 광고 → 전면 금지 법안 추진 중 (2025~)</span></div>
+      <div class="row"><span class="b bo">허용</span><span class="rl">남성 상의탈의 — 스포츠 맥락 허용. 관능적 구도는 리스크</span></div>
+      <div class="row"><span class="b bo">허용</span><span class="rl">돼지고기 — 법적 금지 없음 (문화적 주의 필요)</span></div>
+      <div class="div"></div>
+      <div class="row"><span class="b bi">참고</span><span class="rl">인플루언서 광고 공시 의무 강화 (2025~ 시행 예정)</span></div>
+      <div class="row"><span class="b bi">참고</span><span class="rl">일 100만명 이상 플랫폼 → 현지 법인 의무</span></div>
+    </div>
+
+    <div class="cc id">
+      <div class="cchead"><div class="ccname">인도네시아</div><div class="ccsub">ID · 인구 2.7억<br>무슬림 87%</div></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">알코올 (TikTok 정책)</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">돼지고기 · 돼지 젤라틴 (비할랄, 고위험)</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">도박 · 카지노</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">법률 서비스 광고 (TikTok 정책)</span></div>
+      <div class="div"></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">식품 → 할랄 인증 필수 흐름 (2025 강화)</span></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">의약품·뷰티 → BPOM 허가 필수</span></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">비키니·과도한 노출 자제</span></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">라마단 기간 크리에이티브 민감도 변동</span></div>
+      <div class="row"><span class="b bo">허용</span><span class="rl">남성 상의탈의 — 헬스·스포츠 맥락 OK. 관능적 클로즈업은 리젝 리스크</span></div>
+      <div class="div"></div>
+      <div class="row"><span class="b bi">참고</span><span class="rl">CPM $2 미만 — 예산 소진 빠른 고효율 시장</span></div>
+      <div class="row"><span class="b bi">참고</span><span class="rl">TikTok Shop e커머스는 별도 규제 적용</span></div>
+      <div class="row"><span class="b bi">참고</span><span class="rl">2025.10 일시 운영정지 이력 → 규제 불안정 존재</span></div>
+    </div>
+
+    <div class="cc th">
+      <div class="cchead"><div class="ccname">태국</div><div class="ccsub">TH · 인구 7,100만<br>불교 95% · 입헌군주제</div></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">알코올 직접 광고 원칙 금지 (2025.11 개정법. 단 정보성 콘텐츠는 논의 중)</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">인플루언서 주류 마케팅 (2025.11 개정법 명시)</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">담배 · 전자담배</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">도박 · 카지노 · 온라인 베팅 (전면 불법)</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">왕실 모독 — 형법 112조 최대 징역 15년</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">처방약 직접 광고</span></div>
+      <div class="row"><span class="b bn">금지</span><span class="rl">허위 효능 주장 (건강기능식품 등)</span></div>
+      <div class="div"></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">남성 상의탈의 — TV 기준 차단 대상. TikTok 광고도 보수적 심사 예상</span></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">발바닥·발뒤꿈치 노출 — 문화적 실례</span></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">불교 관련 이미지·상징 오용 → 강한 반발 가능</span></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">정치·군주제 관련 콘텐츠 절대 금기</span></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">체중감량 보충제 → TikTok 브랜디드 콘텐츠 제한 대상</span></div>
+      <div class="row"><span class="b bo">허용</span><span class="rl">돼지고기 — 불교 국가이나 식품 제한 없음 (이슬람과 다름)</span></div>
+      <div class="div"></div>
+      <div class="row"><span class="b bi">참고</span><span class="rl">TikTok 소셜 광고 점유율 ~20% (2025). 소셜커머스 1위 플랫폼</span></div>
+      <div class="row"><span class="b bi">참고</span><span class="rl">광고 집행 시 사업자 라이선스 요구 (TikTok 정책)</span></div>
+      <div class="row"><span class="b bi">참고</span><span class="rl">MDES 24시간 콘텐츠 삭제 의무 (2025~) — 민감 콘텐츠 즉시 리젝 가능</span></div>
+    </div>
+
+  </div>
+
+  <div class="stitle">남성 상의탈의 — 국가별 판단</div>
+  <div class="sh-grid">
+    <div class="shc"><div class="shn">중동</div><span class="b bw">맥락 의존</span><div class="sht">SA·IQ·KW 등 보수국 — 피할 것<br>UAE·BH — 스포츠 컨텍스트만 가능<br>관능적 포즈·클로즈업 시 리젝</div></div>
+    <div class="shc"><div class="shn">터키</div><span class="b bo">스포츠 OK</span><div class="sht">헬스·스포츠 광고는 통과 가능<br>성적 시사 구도는 RTÜK 리스크<br>도시 지역 타겟은 비교적 유연</div></div>
+    <div class="shc"><div class="shn">인도네시아</div><span class="b bw">맥락 의존</span><div class="sht">헬스·스포츠 목적이면 가능<br>복근 클로즈업 등 관능적 편집은 리젝<br>심사 기준: "몸 자체가 목적인가?"</div></div>
+    <div class="shc"><div class="shn">태국</div><span class="b bw">보수적 심사</span><div class="sht">TV 방송 기준상 남성 상의탈의도 차단 대상<br>TikTok 광고는 별도 기준이나 보수적 심사 예상<br>스포츠 맥락이라도 클로즈업은 피할 것</div></div>
+  </div>
+
+  <div class="stitle">광고 언어 정책 — TikTok 공식 기준 (2026.04)</div>
+  <div class="notice">
+    TikTok 공식 정책: 광고 언어는 <strong>타겟 시장에서 수용 가능한 언어</strong>여야 하며, 랜딩페이지 언어와 일치해야 합니다. 법적 면책 문구(disclaimer)는 <strong>반드시 현지어</strong>로 표기해야 합니다. (출처: TikTok Ad Format &amp; Functionality Policy, 2026.04)
+  </div>
+  <div class="lgrid">
+    <div class="lc">
+      <div class="lct">중동 (SA·UAE·QA 등)</div>
+      <div class="tr"><span class="lt">아랍어</span><span class="lt">영어</span></div>
+      <div class="ln">TikTok 정책상 광고주 재량. 실무상 <strong>아랍어 병기</strong>가 CTR·품질점수에 유리. 법적 면책 문구는 아랍어 필수.</div>
+    </div>
+    <div class="lc">
+      <div class="lct">터키</div>
+      <div class="tr"><span class="lt">터키어</span><span class="lt">영어</span></div>
+      <div class="ln">TikTok 정책상 광고주 재량. 소비자보호법상 터키어 권장. 영어 단독은 B2C 전환율 저하 우려.</div>
+    </div>
+    <div class="lc">
+      <div class="lct">인도네시아</div>
+      <div class="tr"><span class="lt">바하사 인도네시아</span><span class="lt">영어</span></div>
+      <div class="ln"><strong>영어 허용 (공식 명시)</strong>. 단, 법적 면책 문구·의무 고지사항은 <strong>인도네시아어 필수</strong>.</div>
+    </div>
+    <div class="lc">
+      <div class="lct">태국</div>
+      <div class="tr"><span class="lt">태국어</span><span class="lt">영어</span></div>
+      <div class="ln"><strong>영어 허용 (공식 명시)</strong>. 단, 법적 면책 문구·의무 고지사항은 <strong>태국어 필수</strong>. B2C는 태국어 권장.</div>
+    </div>
+  </div>
+
+  <div class="stitle">인도네시아·태국 광고 집행 시 실질적 이슈</div>
+  <div class="notice am">
+    광고 예산이 안 탄다기보다 <strong>구조적 차이</strong>가 있는 시장입니다. 아래 이슈를 집행 전 체크하세요.
+  </div>
+  <div class="dgrid">
+    <div class="dc id">
+      <div class="dct">인도네시아</div>
+      <div class="row"><span class="b bo">장점</span><span class="rl">CPM $2 미만 — 같은 예산으로 미국 대비 ~7배 노출량</span></div>
+      <div class="row"><span class="b bo">장점</span><span class="rl">러닝 페이즈 통과 빠름 (낮은 CPA로 50 conv. 빠르게 확보)</span></div>
+      <div class="div"></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">할랄·종교 감수성 위반 크리에이티브 → 리젝 시 예산 홀딩 발생</span></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">TikTok Shop 연계 포맷 일부 제한 (e커머스 분리 규제)</span></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">라마단 기간 알고리즘 변동·소비 패턴 전환 주의</span></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">규제 불안정 — 2025.10 운영정지 이력, 재발 가능성 있음</span></div>
+    </div>
+    <div class="dc th">
+      <div class="dct">태국</div>
+      <div class="row"><span class="b bo">장점</span><span class="rl">TikTok 소셜 광고 점유율 ~20% (2025) — 플랫폼 성장 빠름</span></div>
+      <div class="row"><span class="b bo">장점</span><span class="rl">소셜커머스 1위 플랫폼 — 쇼핑 연계 광고 효과 높음</span></div>
+      <div class="row"><span class="b bo">장점</span><span class="rl">도달 가능 오디언스 6,500만+ (2025.05 기준)</span></div>
+      <div class="div"></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">알코올·인플루언서 주류 광고 → 2025.11 개정법 후 매우 엄격</span></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">왕실·정치 콘텐츠 → 즉시 리젝 + 형사처벌 리스크 (형법 112조)</span></div>
+      <div class="row"><span class="b bw">주의</span><span class="rl">MDES 24시간 삭제 의무 — 민감 크리에이티브 자동 리젝 가능성 높음</span></div>
+      <div class="row"><span class="b bi">참고</span><span class="rl">광고 집행 시 사업자 라이선스 요구 (TikTok 정책)</span></div>
+    </div>
+  </div>
+
+  <div class="stitle">카테고리별 요약</div>
+  <div class="sw">
+    <table>
+      <thead><tr><th>카테고리</th><th>중동</th><th>터키</th><th>인도네시아</th><th>태국</th></tr></thead>
+      <tbody>
+        <tr><td>알코올</td><td><span class="b bn">금지</span></td><td><span class="b bn">금지</span></td><td><span class="b bn">금지</span></td><td><span class="b bn">원칙 금지</span></td></tr>
+        <tr><td>돼지고기·돼지 젤라틴</td><td><span class="b bn">금지</span></td><td><span class="b bw">문화적 주의</span></td><td><span class="b bn">고위험</span></td><td><span class="b bo">가능</span></td></tr>
+        <tr><td>도박</td><td><span class="b bn">금지</span></td><td><span class="b bn">사실상 금지</span></td><td><span class="b bn">금지</span></td><td><span class="b bn">전면 불법</span></td></tr>
+        <tr><td>담배·전자담배</td><td><span class="b bn">금지</span></td><td><span class="b bn">금지</span></td><td><span class="b bn">금지</span></td><td><span class="b bn">금지</span></td></tr>
+        <tr><td>여성 반바지·민소매</td><td><span class="b bn">SA 등 금지</span></td><td><span class="b bw">과노출 주의</span></td><td><span class="b bw">과노출 자제</span></td><td><span class="b bw">선정성 주의</span></td></tr>
+        <tr><td>비키니·수영복</td><td><span class="b bn">전 중동 자제</span></td><td><span class="b bw">도시만 일부</span></td><td><span class="b bn">크리에이티브 부적합</span></td><td><span class="b bw">선정적 구도 금지</span></td></tr>
+        <tr><td>남성 상의탈의</td><td><span class="b bw">스포츠만 UAE</span></td><td><span class="b bo">스포츠 OK</span></td><td><span class="b bw">스포츠 맥락만</span></td><td><span class="b bw">보수적 심사</span></td></tr>
+        <tr><td>왕실·종교 모독</td><td><span class="b bn">이슬람 절대 금지</span></td><td><span class="b bw">민감</span></td><td><span class="b bw">이슬람 민감</span></td><td><span class="b bn">형사처벌 리스크</span></td></tr>
+        <tr><td>점성술·운세</td><td><span class="b bn">금지</span></td><td><span class="b bn">금지</span></td><td><span class="b bo">가능</span></td><td><span class="b bo">가능</span></td></tr>
+        <tr><td>광고 언어</td><td>아랍어 병기 권장</td><td>터키어 권장</td><td>영어 공식 허용</td><td>영어 허용, 태국어 권장</td></tr>
+        <tr><td>플랫폼 리스크</td><td><span class="b bw">UAE 허가 필요</span></td><td><span class="b bo">안정적</span></td><td><span class="b bw">규제 불안정</span></td><td><span class="b bw">콘텐츠 규제 강화</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <b>근거 출처</b><br>
+    TikTok Advertising Policies — Ad Format &amp; Functionality (2026.04) · Adult Content (2025.11) · Alcohol (2025.09) · Other Products &amp; Services · Branded Content Policy Market-specific Requirements<br>
+    CMS Law Turkey Advertising Guide · UAE UAEMC Advertiser Permit Regulation (2025.07) · Saudi GAMR/CITC Guidelines · Indonesia Reg 31/2023 · BPOM Cosmetic Regulation 18/2024<br>
+    Thailand Alcoholic Beverage Control Act No.2 B.E. 2568 (2025.11 시행) · Thailand Computer Crimes Act · Thailand Criminal Code Section 112 (Lèse-majesté) · MDES 24-Hour Takedown Notification (2025)<br>
+    <br>
+    본 자료는 2026년 4월 기준이며, TikTok 정책은 수시 변경됩니다. 실제 집행 전 <a href="https://ads.tiktok.com/help/" target="_blank">TikTok Ads Help Center</a> 최신 내용 확인 및 현지 법무 전문가 검토를 권장합니다.
+  </div>
+
+</div>
+</body>
+</html>
